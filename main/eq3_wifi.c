@@ -201,9 +201,9 @@ int send_device_list(char *list){
 }
 
 int connect_server(char *url, char *user, char *password, char *id){
-    sprintf(lwt_topic_buff, "/%sradout", id);
-    sprintf(intopicbase, "/%sradin", id);
-    sprintf(outtopicbase, "/%sradout", id);
+    sprintf(lwt_topic_buff, "%sradout", id);
+    sprintf(intopicbase, "%sradin", id);
+    sprintf(outtopicbase, "%sradout", id);
 
     esp_mqtt_client_config_t settings = {
 #if defined(CONFIG_MQTT_SECURITY_ON)
